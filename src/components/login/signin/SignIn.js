@@ -43,6 +43,7 @@ export default function SignIn(props) {
         if (username && password) {
             const fetchItem = await fetch('https://liori.herokuapp.com/api/auth/login', {
                 method: 'post',
+                mode: 'cors',
                 credentials: 'include',
                 headers: {
                     'Accept': 'application/json',
@@ -68,6 +69,7 @@ export default function SignIn(props) {
         if (name && username && password) {
             const fetchItem = await fetch('https://liori.herokuapp.com/api/auth/signup', {
                 method: 'post',
+                mode: 'cors',
                 credentials: 'include',
                 headers: {
                     'Accept': 'application/json',

@@ -9,6 +9,7 @@ export const RouteProvider = ({reducer, initialState, children}) => {
         try {
             const fetchItem = await fetch('https://liori.herokuapp.com/api/auth/login', {
                 method: 'get',
+                mode: 'cors',
                 credentials: 'include',
                 user: document.cookie.user,
             });
