@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Redirect } from 'react-router-dom'
 
 import Navbar from './components/navbar/page/Navbar';
 
@@ -27,6 +27,9 @@ function App() {
         
           {/* Specific user: */}
           <Route path="/user/:user" exact element={<UserPage/>} />   
+
+          {/* Specific user: */}
+          <Route path="/" exact element={<Redirect to="/users"/>} />  
 
           {/* Not found page */}
           <Route path="*" exact element={<NotFound/>} />
