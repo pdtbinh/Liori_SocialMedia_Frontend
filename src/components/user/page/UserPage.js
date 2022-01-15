@@ -12,6 +12,8 @@ export default function UserPage(props) {
 
     const location = useLocation();
 
+    const [message, setMessage] = useState('Loading...');
+
     const findUserID = () => {
         let parts = location.pathname.split('/');
         return parts[parts.indexOf('user') + 1];
@@ -28,15 +30,22 @@ export default function UserPage(props) {
     const fetchViewedUser = async () => {
         const fetchItem = await fetch(`https://liori.herokuapp.com/api/user/${findUserID()}`);
         const item = await fetchItem.json();
-        dispatch({type: 'view', 
-            viewedUser: item.user,
-            //viewedInfo: item.info,
-            viewedEducations: item.educations,
-            viewedExperiences: item.experiences,
-            viewedProjects: item.projects,
-            viewedCertificates: item.certificates,
-            viewedLikes: item.likes,
-        });
+        if (item.user) {
+            dispatch(
+                {   type: 'view', 
+                    viewedUser: item.user,
+                    //viewedInfo: item.info,
+                    viewedEducations: item.educations,
+                    viewedExperiences: item.experiences,
+                    viewedProjects: item.projects,
+                    viewedCertificates: item.certificates,
+                    viewedLikes: item.likes,
+                }
+            );
+        } else {
+            setMessage('404: Sorry, there is no such user :-(');
+        }
+        
     }
 
     if (state.viewedUser && state.viewedUser._id.toString() === findUserID()) {
@@ -57,7 +66,7 @@ export default function UserPage(props) {
         return (
             <div className='UserLoadingDiv'>
                 <div className='UserLoadingPanel'>
-                    <p>Loading...</p>
+                    <p>{message}</p>
                 </div>
             </div>);
         
