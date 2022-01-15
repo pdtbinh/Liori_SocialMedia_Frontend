@@ -12,8 +12,8 @@
 
 .NoFoundPanel {
     align-self: center;
-    width: fit-content;
-    height: 50vw;
+    height: fit-content;
+    width: 50vw;
     padding: 20px;
     border: 5px solid aqua;
     border-radius: 10px;

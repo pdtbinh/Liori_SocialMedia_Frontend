@@ -2,8 +2,6 @@ import './SignIn.css'
 import { useRouteContext } from '../../../providers/routeProvider/RouteProvider';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import { BrowserRouter as Navigate } from 'react-router-dom'
-
 
 export default function SignIn(props) {
     // Get navigate and location
@@ -143,7 +141,11 @@ export default function SignIn(props) {
             
         )
     } else {
-        return <Navigate to="/users"/>
+        <div className='LogoutReminderDiv'>
+            <div className='LogoutReminderPanel'>
+                <p>Please logout first</p>
+            </div>
+        </div>
     }
     
 }

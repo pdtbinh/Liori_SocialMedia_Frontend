@@ -1,9 +1,9 @@
 .SignInDiv {
     margin-top: 5vh;
     width: 100vw;
-    height: 60vh;
+    height: 80vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -76,8 +76,30 @@
 
 .DevNotePanel {
     align-self: center;
-    width: fit-content;
-    height: 50vw;
+    height: fit-content;
+    width: 50vw;
+    padding: 20px;
+    border: 5px solid aqua;
+    border-radius: 10px;
+    color: aqua;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    text-align: center;
+    font-style: italic;
+} 
+
+.LogoutReminderDiv {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LogoutReminderPanel {
+    align-self: center;
+    height: fit-content;
+    width: 50vw;
     padding: 20px;
     border: 5px solid aqua;
     border-radius: 10px;
