@@ -141,11 +141,12 @@ export default function SignIn(props) {
             
         )
     } else {
-        <div className='LogoutReminderDiv'>
-            <div className='LogoutReminderPanel'>
-                <p>Please logout first</p>
-            </div>
-        </div>
+        return(
+            <div className='LogoutReminderDiv'>
+                <div className='LogoutReminderPanel'>
+                    <p>Please logout first</p>
+                </div>
+            </div>);
     }
     
 }
