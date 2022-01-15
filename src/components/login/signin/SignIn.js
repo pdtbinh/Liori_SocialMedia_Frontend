@@ -130,10 +130,11 @@ export default function SignIn(props) {
                         {!isSignIn ? <button className='SigninFormButton' onClick={hideSignUp}>Cancel</button> 
                         : null}
                     </div>
-                    <div className='DevNoteDiv'>
-                        <div className='DevNotePanel'>
-                            <p>Developer note: Please allow cross-site cookies on your browser to login. If you're viewing as guest only, there is no need to do so. Thank you. Have a great day! :-)</p>
-                        </div>
+                </div>
+
+                <div className='DevNoteDiv'>
+                    <div className='DevNotePanel'>
+                        <p>Developer note: Please allow cross-site cookies on your browser to login. If you're viewing as guest only, there is no need to do so. Thank you. Have a great day! :-)</p>
                     </div>
                 </div>
             </div>
