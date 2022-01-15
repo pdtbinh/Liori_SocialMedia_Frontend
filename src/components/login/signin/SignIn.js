@@ -134,7 +134,7 @@ export default function SignIn(props) {
 
                 <div className='DevNoteDiv'>
                     <div className='DevNotePanel'>
-                        <p>Developer note: Please allow cross-site cookies on your browser to login. If you're viewing as guest only, there is no need to do so. Thank you. Have a great day! :-)</p>
+                        <p>Developer note: If you are logging in, please make sure cross-site cookies are enable on your browser (they're usaully blocked on Safari). If you're viewing as guest only, there is no need to do so. Thank you. Have a great day! :-)</p>
                     </div>
                 </div>
             </div>
@@ -144,7 +144,7 @@ export default function SignIn(props) {
         return(
             <div className='LogoutReminderDiv'>
                 <div className='LogoutReminderPanel'>
-                    <p>Please logout first</p>
+                    <p>Welcome, {state.user.name}!</p>
                 </div>
             </div>);
     }
