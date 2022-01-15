@@ -30,7 +30,7 @@ export default function UserPage(props) {
     const fetchViewedUser = async () => {
         const fetchItem = await fetch(`https://liori.herokuapp.com/api/user/${findUserID()}`);
         const item = await fetchItem.json();
-        if (item.user) {
+        if (item.error !== 'No such user') {
             dispatch(
                 {   type: 'view', 
                     viewedUser: item.user,
