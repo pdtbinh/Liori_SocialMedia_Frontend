@@ -20,7 +20,7 @@
     justify-content: flex-start;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
-    border: 1px solid aqua;
+    border: 5px solid aqua;
     border-radius: 10px;
     overflow: scroll;
 }

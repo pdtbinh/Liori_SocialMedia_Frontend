@@ -47,7 +47,11 @@ export default function UsersPage(props) {
                 <AllUsers users={state.users}/>
             </div>);
     } else {
-        return (<h1>Loading</h1>);
+        return (<div className='UsersLoadingDiv'>
+        <div className='UsersLoadingPanel'>
+            <p>Loading...</p>
+        </div>
+    </div>);
     }
     
 }

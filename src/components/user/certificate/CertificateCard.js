@@ -35,6 +35,10 @@ export default function CertificateCard(props) {
         setEdit(false);
     }
 
+    const openNewWindow = () => {
+        window.open(props.certificate.link, '_blank');
+    }
+
     if (!edit) {
         return (
             <div className='CertificateCard'>
@@ -46,18 +50,18 @@ export default function CertificateCard(props) {
                 </div>
 
                 <div className='CertificateButtons'>
-                    <button>
+                    <button onClick={openNewWindow}>
                         <OpenInNewIcon/>
                     </button>
                     
                     {(state.user && state.viewedUser && state.viewedUser._id.toString() === state.user._id.toString()) ?
-                    <button>
-                        <EditIcon onClick={showEdit}/>
+                    <button onClick={showEdit}>
+                        <EditIcon/>
                     </button> : null}
 
                     {(state.user && state.viewedUser && state.viewedUser._id.toString() === state.user._id.toString()) ?
                     <button onClick={handleDelete}>
-                        <DeleteForeverIcon />
+                        <DeleteForeverIcon/>
                     </button> : null}
                 </div>
                 

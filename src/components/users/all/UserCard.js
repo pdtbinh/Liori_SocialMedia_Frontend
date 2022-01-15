@@ -16,8 +16,7 @@ export default function UserCard(props) {
             <button className='UserCardButtons' onClick={toUser}>
                 <FolderSharedIcon fontSize='large'/>
                 <p>{props.user.name}</p>
-            </button>
-            
+            </button>  
         </div>
     )
 }

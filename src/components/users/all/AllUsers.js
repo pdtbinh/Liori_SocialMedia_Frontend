@@ -12,8 +12,7 @@ export default function AllUsers(props) {
                         <UserCard user={user} key={user._id}/>
                     </Grid>
                 ))}
-            </Grid>
-            
+            </Grid> 
         </div>
     )
 }

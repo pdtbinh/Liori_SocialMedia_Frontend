@@ -36,6 +36,10 @@ export default function ProjectCard(props) {
         setEdit(false);
     }
 
+    const openNewWindow = () => {
+        window.open(props.project.link, '_blank');
+    }
+
     if (!edit) {
         return (
             <div className='ProjectCard'>
@@ -44,7 +48,7 @@ export default function ProjectCard(props) {
                     <div className='ProjectTitle'>
                         <p className='ProTitleText'>{props.project.name}</p>
                         <div className='ProjectButtons'>
-                            <button>
+                            <button onClick={openNewWindow}>
                                 <OpenInNewIcon/>
                             </button>
                             {(state.user && state.viewedUser && state.viewedUser._id.toString() === state.user._id.toString()) ?

@@ -1,5 +1,5 @@
 import './UserPage.css';
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from "react-router-dom";
 import { useRouteContext } from "../../../providers/routeProvider/RouteProvider";
 import { Grid } from '@mui/material';
@@ -39,8 +39,7 @@ export default function UserPage(props) {
         });
     }
 
-    
-    if (state.viewedUser) {
+    if (state.viewedUser && state.viewedUser._id.toString() === findUserID()) {
         return (
             <div className='UserPage'>
                 <Grid container spacing={2}>
@@ -55,7 +54,13 @@ export default function UserPage(props) {
                 </Grid>
             </div>)
     } else {
-        return (<h1>Loading</h1>)
+        return (
+            <div className='UserLoadingDiv'>
+                <div className='UserLoadingPanel'>
+                    <p>Loading...</p>
+                </div>
+            </div>);
+        
     }
     
 }

@@ -13,7 +13,6 @@ import NotFound from './components/notfound/page/NotFound';
 import UserPage from './components/user/page/UserPage';
 
 function App() {
-  console.log('FROM REACTTTTTTT')
   return (
     <Router>
       <div className="App">
