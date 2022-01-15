@@ -18,7 +18,7 @@ export const RouteProvider = ({reducer, initialState, children}) => {
                 dispatch({type: 'signin', user: user});
             }
         } catch (err) {
-            console.log('Provider: ', err);
+            //console.log('Provider: ', err);
         }
     }
 

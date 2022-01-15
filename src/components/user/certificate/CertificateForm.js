@@ -10,12 +10,17 @@ export default function CertificateForm(props) {
     const [show, setShow] = useState(false);
 
     const [name, setName] = useState('');
+    const [type, setType] = useState('');
     const [provider, setProvider] = useState('');
     const [link, setLink] = useState('');
     const [order, setOrder] = useState(1);
 
     const handleName = (evt) => {
         setName(evt.target.value);
+    }
+
+    const handleType = (evt) => {
+        setType(evt.target.value);
     }
 
     const handleProvider = (evt) => {
@@ -52,6 +57,7 @@ export default function CertificateForm(props) {
                 body: JSON.stringify({
                     userID: state.user._id.toString(),
                     name: name,
+                    type: type,
                     provider: provider,
                     link: link,
                     order: parseInt(order),
@@ -80,6 +86,12 @@ export default function CertificateForm(props) {
                     <input 
                         onChange={handleName} 
                         placeholder='Title of the certificate' 
+                        type="text"/>
+
+                    <p>Type</p>
+                    <input 
+                        onChange={handleType} 
+                        placeholder='Type of the certificate' 
                         type="text"/>
                     
                     <p>Provider</p>

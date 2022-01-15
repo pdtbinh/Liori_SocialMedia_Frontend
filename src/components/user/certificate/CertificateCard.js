@@ -46,6 +46,7 @@ export default function CertificateCard(props) {
 
                 <div className='CertificateContent'>
                     <p className='CerTitleText'>{props.certificate.name}</p>
+                    <p className='CerProviderText CerTitleTypeText'>{props.certificate.type}</p>
                     <p className='CerProviderText'>{props.certificate.provider}</p>
                 </div>
 
@@ -78,12 +79,17 @@ function EditCertificateForm(props) {
     const [state, dispatch] = useRouteContext();
 
     const [name, setName] = useState(props.certificate.name);
+    const [type, setType] = useState(props.certificate.type);
     const [provider, setProvider] = useState(props.certificate.provider);
     const [link, setLink] = useState(props.certificate.link);
     const [order, setOrder] = useState(props.certificate.order);
 
     const handleName = (evt) => {
         setName(evt.target.value);
+    }
+
+    const handleType = (evt) => {
+        setType(evt.target.value);
     }
 
     const handleProvider = (evt) => {
@@ -120,6 +126,7 @@ function EditCertificateForm(props) {
                 body: JSON.stringify({
                     certificateID: props.certificate._id.toString(),
                     name: name,
+                    type: type,
                     provider: provider,
                     link: link,
                     order: parseInt(order),
@@ -141,6 +148,13 @@ function EditCertificateForm(props) {
                     defaultValue={name}
                     onChange={handleName} 
                     placeholder='Title of the certificate' 
+                    type="text"/>
+
+                <p>Type</p>
+                <input 
+                    defaultValue={type}
+                    onChange={handleType} 
+                    placeholder='Type of the certificate' 
                     type="text"/>
                 
                 <p>Provider</p>
