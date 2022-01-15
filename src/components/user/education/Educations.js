@@ -18,7 +18,7 @@ export default function Educations(props) {
                     <HelpOutlineIcon className='EduHelpIcon'/>
                 </Tooltip>
             </div>
-            { props.educations.map(education => {
+            { [...props.educations].reverse().map(education => {
                 return (<div className='EducationsDiv' key={education._id.toString()}>
                     <EducationCard education={education}/>
                     <div className='WebChartDiv'>
