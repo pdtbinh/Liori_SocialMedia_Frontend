@@ -2,6 +2,8 @@ import './SignIn.css'
 import { useRouteContext } from '../../../providers/routeProvider/RouteProvider';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import { BrowserRouter as Navigate } from 'react-router-dom'
+
 
 export default function SignIn(props) {
     // Get navigate and location
@@ -95,6 +97,11 @@ export default function SignIn(props) {
     if (!state.user) {
         return (
             <div className='SignInDiv'>
+                <div className='DevNoteDiv'>
+                    <div className='DevNotePanel'>
+                        <p>Developer note: Please allow cross-site cookies on your browser to login. If you're viewing as guest only, there is no need to do so. Thank you. Have a great day! :-)</p>
+                    </div>
+                </div>
                 <div className='SignIn'>
                     {!isSignIn ? <p>Full name</p> : null}
 
@@ -136,7 +143,7 @@ export default function SignIn(props) {
             
         )
     } else {
-        return <h1>Please log out first!</h1>
+        return <Navigate to="/users"/>
     }
     
 }
