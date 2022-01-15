@@ -1,0 +1,67 @@
+.SignInDiv {
+    margin-top: 5vh;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.SignIn {
+    width: 300px;
+    height: fit-content;
+    color: var(--theme);
+    font-family: 'Times New Roman', cursive, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid aqua;
+    border-radius: 20px;
+}
+
+.SignIn p {
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', cursive, sans-serif;
+}
+
+.SignIn input {
+    padding: 0.5rem;
+    border: none;
+    border: 1px solid var(--theme);
+    border-radius: 5px;
+    width: 80%;
+    background-color: transparent;
+    color: var(--theme);
+    font-weight: normal;
+    font-family: 'Times New Roman', cursive, sans-serif;
+}
+
+.SigninFormButtons {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.SigninFormButton {
+    margin: 0px 0px;
+    color: var(--theme);
+    background-color: transparent;
+    font-family: 'Times New Roman', cursive, sans-serif;
+    border: none;
+    border: 1px solid var(--theme);
+    border-radius: 10px;
+    width: 30%;
+    padding: 8px 5px;
+    margin: 4vh 2vw;
+    transition: 0.2s;
+}
+
+.SigninFormButton:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

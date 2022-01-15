@@ -1,0 +1,44 @@
+.Certificates {
+    height: 95%;
+    
+    overflow: scroll;
+    border-radius: 2px;
+    background-color: rgba(40, 40, 40, 0);
+    /* box-shadow: rgb(70, 220, 255, 0.5) 0px 3px 8px; */
+    color: var(--theme);
+    font-family: 'Times New Roman', Times, serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    transition: 0.5s;
+    border-left: 1px dashed rgba(0, 255, 255, 0.5);
+}
+
+.CertificatesTitle {
+    font-weight: bold;
+    text-align: center;
+    margin: 1vh;
+}
+
+.Certificates-small {
+    width: 40%;
+}
+
+.Certificates-large {
+    width: 80%;
+}
+
+.CertificatesCount {
+    background: linear-gradient(0deg, rgb(255, 92, 28) 30%, rgb(50, 255, 50) 50%, rgb(251, 255, 50) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    font-size: 19vh;
+    line-height: 19vh;
+    overflow: hidden;
+    margin: 0;
+    transition: 0.5s;
+}
+

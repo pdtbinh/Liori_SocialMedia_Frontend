@@ -1,0 +1,44 @@
+.WebChart {
+    height: 25vh;
+    width: 100%;
+}
+
+.WebChart line {
+    stroke-linecap: round;
+}
+
+.WebChart .FrameLine {
+    stroke-opacity: 0.5;
+    stroke-width: 4%;
+    transition: 0.2s;
+}
+.WebChart .FrameLine:hover {
+    stroke-opacity: 1;
+    stroke-width: 5%;
+}
+
+.WebChart .DataLine {
+    stroke-opacity: 1;
+    stroke-width: 3%;
+    transition: 0.2s;
+}
+
+.WebChart .DataLine:hover {
+    stroke: orange;
+    stroke-width: 4%;
+}
+
+.WebChart circle {
+    transition: 0.2s;
+}
+
+.WebChart circle:hover {
+    stroke: orange;
+    stroke-width: 3%;
+}
+
+.small {
+    font-family: serif;
+    font-size: 2px;
+    font-style: normal;
+}

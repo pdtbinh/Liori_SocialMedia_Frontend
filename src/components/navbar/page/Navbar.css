@@ -1,0 +1,55 @@
+.Navbar {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(40, 40, 40, 0.5);
+    margin-bottom: 2vh;
+    border-bottom: 3px solid var(--theme);
+    box-shadow: rgb(70, 220, 255, 0.5) 0px 3px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+.NavbarLogo {
+    height: 35px;
+    width: 35px;
+    border: 2px solid aqua;
+    border-radius: 8px;
+    margin: 0vw 4vw;
+    align-self: center;
+}
+
+.NavbarLogo img {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.NavbarButtons {
+    border-left: 1px solid rgba(0, 255, 255, 0.2);
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+}
+
+.NavbarButtons button {
+    background-color: transparent;
+    color: var(--theme);
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 0.5vw 4vw;
+}
+
+.NavbarButtons button:hover {
+    transform: translateY(-3px);
+}
+
+.NavbarCenterButtons button {
+    margin: 0.5vw 2vw;
+}

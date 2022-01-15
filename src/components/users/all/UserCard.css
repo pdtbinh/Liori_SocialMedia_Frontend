@@ -1,0 +1,35 @@
+.UserCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--theme);
+}
+
+.UserCard button {
+    height: 60px;
+    width: 80%;
+    background-color: transparent;
+    color: var(--theme);
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.UserCard p {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.UserCard button:hover {
+    transform: translateY(-3px);
+}

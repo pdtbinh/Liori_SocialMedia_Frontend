@@ -1,0 +1,10 @@
+.AllUsers {
+   margin-top: 5vh;
+   width: 100%;
+   height: fit-content;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   padding-left: 3vw;
+}

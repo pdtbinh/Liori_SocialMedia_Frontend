@@ -1,0 +1,94 @@
+.EducationForm {
+    width: 60%;
+    height: fit-content;
+    margin-bottom: 2vh;
+}
+
+.EducationForm p {
+    font-weight: bold;
+    font-family: 'Times New Roman', cursive, sans-serif;
+}
+
+.EducationForm input {
+    padding: 0.5rem;
+    border: none;
+    border: 1px solid var(--theme);
+    border-radius: 5px;
+    width: 90%;
+    background-color: transparent;
+    color: var(--theme);
+    font-weight: normal;
+    font-family: 'Times New Roman', cursive, sans-serif;
+}
+
+.EducationForm textarea {
+    padding: 0.5rem;
+    border: none;
+    border: 1px solid var(--theme);
+    border-radius: 10px;
+    width: 90%;
+    background-color: transparent;
+    color: var(--theme);
+    font-weight: normal;
+    font-family: 'Times New Roman', cursive, sans-serif;
+}
+
+.EducationFormButtons {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.EducationFormButton {
+    margin: 0px 0px;
+    color: var(--theme);
+    background-color: transparent;
+    font-family: 'Times New Roman', cursive, sans-serif;
+    border: none;
+    border: 1px solid var(--theme);
+    border-radius: 10px;
+    width: 30%;
+    padding: 8px 5px;
+    margin: 1vh;
+    transition: 0.2s;
+}
+
+.EducationFormButton:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.EducationContentForm {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddEducationButtonDiv {
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.AddEducationButton {
+    align-self: center;
+    border: 2px solid var(--theme);
+    border-radius: 10px;
+    color: var(--theme);
+    background-color: transparent;
+    width: 30%;
+    margin: 2vh 0px;
+    height: fit-content;
+    font-family: 'Times New Roman', cursive, sans-serif;
+    transition: 0.2s;
+}
+
+.AddEducationButton:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

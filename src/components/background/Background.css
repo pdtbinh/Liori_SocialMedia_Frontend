@@ -1,0 +1,17 @@
+.Background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    background-attachment: fixed;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 10%, rgba(0, 255, 255, 0.3) 50%, rgba(0,0,0,1) 90%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    font-size: 200px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive, sans-serif;
+}

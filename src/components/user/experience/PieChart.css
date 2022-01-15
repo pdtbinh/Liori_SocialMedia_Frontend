@@ -1,0 +1,28 @@
+.PieChart {
+    width: 100%;
+    height: 80%;
+}
+
+.PieChartPath {
+    transition: 0.2s;
+}
+
+.PieChartPath:hover {
+    stroke-width: 15%;
+}
+
+.PieChartForeignObject {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.PieChartText {
+    height: fit-content;
+    fill: rgb(247, 255, 255);
+    font-size: 25%;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
+}

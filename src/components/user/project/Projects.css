@@ -1,0 +1,96 @@
+.Projects {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    height: 56vh;
+
+    border-top: 5px solid var(--theme);
+    border-bottom: 5px solid var(--theme);
+    border-radius: 2px;
+    background-color: rgba(40, 40, 40, 0.5);
+    /* box-shadow: rgb(70, 220, 255, 0.5) 0px 3px 8px; */
+    color: var(--theme);
+    font-family: 'Times New Roman', cursive, sans-serif;
+}
+
+.ProjectsTitle {
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    margin: 1vh;
+}
+
+.ProjectCardsCollection {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 60%;
+    height: 95%; /* So that it does not overflow */
+    overflow: scroll;
+    margin: 0vh 1vh 1vh 1vh;
+}
+
+.ProjectsChart {
+    margin: 1vh 0vh 1vh 0vh;
+    width: 40%;
+    height: 95%; /* So that it does not overflow */
+    overflow: scroll;
+    border-left: dashed 1px rgba(0, 255, 255, 0.562);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.ProjectsChartTitle {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    margin: 0vh 0vh 4vh 0vh;
+    
+    /* border-bottom: 1px solid var(--theme); */
+}
+
+.ColumnChartDiv {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ColumnChartDiv p {
+    margin: 1px;
+    font-style: italic;
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+}
+
+.ProTitleAndHelp {
+    margin: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProSummaryTitle {
+    text-align: center;
+    font-weight: bold;
+    margin: 0vh 1vh 0vh 0vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ProHelpIcon {
+    cursor: help;
+    transition: 0.2s !important;
+}
+
+.ProHelpIcon:hover {
+    transform: translateY(-3px);
+}
