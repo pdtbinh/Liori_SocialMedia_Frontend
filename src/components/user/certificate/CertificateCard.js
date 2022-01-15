@@ -46,8 +46,8 @@ export default function CertificateCard(props) {
 
                 <div className='CertificateContent'>
                     <p className='CerTitleText'>{props.certificate.name}</p>
-                    <p className='CerProviderText CerTitleTypeText'>{props.certificate.type}</p>
                     <p className='CerProviderText'>{props.certificate.provider}</p>
+                    <p className='CerProviderText CerTitleTypeText'>{props.certificate.type}</p>
                 </div>
 
                 <div className='CertificateButtons'>
