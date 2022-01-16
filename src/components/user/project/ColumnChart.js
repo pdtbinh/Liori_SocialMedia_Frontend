@@ -156,7 +156,7 @@ export default function ColumnChart(props) {
                                     L ${xStart + xViewBox * frameWidth / 100 / 2 + tags[i-1].percent/tagMaxPercent * xLength} ${yStart + yStep * i} `}
                                 fillOpacity={0}
                                 stroke={findColor()}
-                                strokeWidth='5%'
+                                strokeWidth={colWidth}
                                 className='ColumnChartPath'
                             />
                         </Tooltip>
