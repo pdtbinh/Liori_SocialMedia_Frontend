@@ -3,6 +3,7 @@ import './ExperienceForm.css';
 import React, { useState } from 'react';
 import { useRouteContext } from '../../../providers/routeProvider/RouteProvider';
 import ProjectCardPanel from '../project/ProjectCardPanel';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
@@ -35,6 +36,11 @@ export default function ExperienceCard(props) {
         setEdit(false);
     }
 
+
+    const openNewWindow = () => {
+        window.open(props.experience.link, '_blank');
+    }
+
     if (!edit) {
         return (
             <div className='ExperienceCard'>
@@ -42,16 +48,21 @@ export default function ExperienceCard(props) {
                 <div className='ExperienceContent'>
                     <div className='ExperienceTitle'>
                         <p className='ExpTitleText'>{props.experience.position}</p>
-                        {(state.user && state.viewedUser && state.viewedUser._id.toString() === state.user._id.toString()) ?
                         <div className='ExperienceButtons'>
+                            <button onClick={openNewWindow}>
+                                <OpenInNewIcon/>
+                            </button>
+
+                            {(state.user && state.viewedUser && state.viewedUser._id.toString() === state.user._id.toString()) ?
                             <button>
-                                <EditIcon onClick={showEdit}/>
-                            </button> 
-    
+                                <EditIcon onClick={showEdit}/> 
+                            </button> : null}
+
+                            {(state.user && state.viewedUser && state.viewedUser._id.toString() === state.user._id.toString()) ?
                             <button onClick={handleDelete}>
                                 <DeleteForeverIcon/>
-                            </button>
-                        </div> : null}
+                            </button>: null}
+                        </div>
                     </div>
                     <div>
                         <p className='ExpCompany'>{props.experience.company} &#183; {props.experience.type}</p>
@@ -80,6 +91,7 @@ function EditExperienceForm(props) {
     const [duration, setDuration] = useState(props.experience.duration);
     const [location, setLocation] = useState(props.experience.location);
     const [introduction, setIntroduction] = useState(props.experience.introduction);
+    const [link, setLink] = useState(props.experience.link);
 
     const handlePosition = (evt) => {
         setPosition(evt.target.value);
@@ -87,6 +99,10 @@ function EditExperienceForm(props) {
 
     const handleIntroduction = (evt) => {
         setIntroduction(evt.target.value);
+    }
+
+    const handleLink = (evt) => {
+        setLink(evt.target.value);
     }
 
     const handleType = (evt) => {
@@ -133,6 +149,7 @@ function EditExperienceForm(props) {
                     duration: duration,
                     location: location,
                     introduction: introduction,
+                    link: link,
                 }),
             }
         )
@@ -195,6 +212,13 @@ function EditExperienceForm(props) {
                     placeholder='Your responsibilities during this position' 
                     type="text">
                 </textarea>
+
+                <p>Link</p>
+                <input 
+                    defaultValue={props.experience.link}
+                    onChange={handleLink}  
+                    placeholder='Certificate of employment'
+                    type="text"/>
 
                 <div className='ExperienceFormButtons'>
                     <button className='ExperienceFormButton' onClick={submitProject}>Submit</button>  

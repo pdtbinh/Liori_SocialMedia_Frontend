@@ -17,6 +17,7 @@ export default function ExperienceForm(props) {
     const [duration, setDuration] = useState('');
     const [location, setLocation] = useState('');
     const [introduction, setIntroduction] = useState('');
+    const [link, setLink] = useState('');
 
     const handlePosition = (evt) => {
         setPosition(evt.target.value);
@@ -24,6 +25,10 @@ export default function ExperienceForm(props) {
 
     const handleIntroduction = (evt) => {
         setIntroduction(evt.target.value);
+    }
+
+    const handleLink = (evt) => {
+        setLink(evt.target.value);
     }
 
     const handleType = (evt) => {
@@ -71,6 +76,7 @@ export default function ExperienceForm(props) {
                     duration: duration,
                     location: location,
                     introduction: introduction,
+                    link: link,
                 }),
             }
         )
@@ -136,6 +142,12 @@ export default function ExperienceForm(props) {
                         placeholder='Your responsibilities during this position' 
                         type="text">
                     </textarea>
+
+                    <p>Link</p>
+                    <input 
+                        onChange={handleLink}  
+                        placeholder='Certificate of employment'
+                        type="text"/>
 
                     <div className='ExperienceFormButtons'>
                         <button className='ExperienceFormButton' onClick={submitProject}>Submit</button>  
