@@ -26,6 +26,7 @@
 
 .CertificateContent {
     padding-right: 5px;
+    overflow: scroll;
 }
 
 .CerTitleText {
