@@ -12,6 +12,7 @@ export default function EducationForm(props) {
 
     const [degree, setDegree] = useState('');
     const [time , setTime] = useState('');
+    const [location, setLocation] = useState('');
     const [institution, setInstitution] = useState('');
     const [introduction, setIntroduction] = useState('');
     const [focus, setFocus] = useState('');
@@ -22,6 +23,10 @@ export default function EducationForm(props) {
 
     const handleTime = (evt) => {
         setTime(evt.target.value);
+    }
+
+    const handleLocation = (evt) => {
+        setLocation(evt.target.value);
     }
 
     const handleInstitution = (evt) => {
@@ -56,6 +61,7 @@ export default function EducationForm(props) {
                     userID: state.user._id.toString(),
                     degree: degree,
                     time: time,
+                    location: location,
                     institution: institution,
                     introduction: introduction,
                     focus: focus,
@@ -91,6 +97,12 @@ export default function EducationForm(props) {
                     <input 
                         onChange={handleTime} 
                         placeholder='Start date - End date' 
+                        type="text"/>
+
+                    <p>Location</p>
+                    <input 
+                        onChange={handleLocation} 
+                        placeholder='Location of institution' 
                         type="text"/>
 
                     <p>Institution</p>

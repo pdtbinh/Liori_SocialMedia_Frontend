@@ -150,7 +150,7 @@ function EditExperienceForm(props) {
                     location: location,
                     introduction: introduction,
                     link: link,
-                }),
+                }), 
             }
         )
         const item = await fetchItem.json();

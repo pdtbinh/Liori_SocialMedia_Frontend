@@ -55,6 +55,7 @@ export default function EducationCard(props) {
                     <div>
                         <p className='Degree'>{props.education.degree}</p>
                         <p className='EduTime'>{props.education.time}</p>
+                        <p className='EduTime'>{props.education.location}</p>
                         <p>{props.education.introduction}</p>
                     </div>
                 </div>
@@ -73,6 +74,7 @@ function EditEducationForm(props) {
 
     const [degree, setDegree] = useState(props.education.degree);
     const [time , setTime] = useState(props.education.time);
+    const [location, setLocation] = useState(props.experience.location);
     const [institution, setInstitution] = useState(props.education.institution);
     const [introduction, setIntroduction] = useState(props.education.introduction);
     const [focus, setFocus] = useState(props.education.focus);
@@ -83,6 +85,10 @@ function EditEducationForm(props) {
 
     const handleTime = (evt) => {
         setTime(evt.target.value);
+    }
+
+    const handleLocation = (evt) => {
+        setLocation(evt.target.value);
     }
 
     const handleInstitution = (evt) => {
@@ -113,6 +119,7 @@ function EditEducationForm(props) {
                     educationID: props.education._id.toString(),
                     degree: degree,
                     time: time,
+                    location: location,
                     institution: institution,
                     introduction: introduction,
                     focus: focus,
@@ -141,6 +148,13 @@ function EditEducationForm(props) {
                     defaultValue={props.education.time}
                     onChange={handleTime} 
                     placeholder='Start date - End date' 
+                    type="text"/>
+
+                <p>Location</p>
+                <input 
+                    defaultValue={props.education.location}
+                    onChange={handleLocation} 
+                    placeholder='Location of institution' 
                     type="text"/>
 
                 <p>Institution</p>
