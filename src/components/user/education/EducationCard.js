@@ -74,7 +74,7 @@ function EditEducationForm(props) {
 
     const [degree, setDegree] = useState(props.education.degree);
     const [time , setTime] = useState(props.education.time);
-    const [location, setLocation] = useState(props.experience.location);
+    const [location, setLocation] = useState(props.education.location);
     const [institution, setInstitution] = useState(props.education.institution);
     const [introduction, setIntroduction] = useState(props.education.introduction);
     const [focus, setFocus] = useState(props.education.focus);
