@@ -40,7 +40,7 @@ export default function Projects(props) {
     return (
         <div className='Projects'>
             <div className='ProjectCardsCollection'>
-                <p className='ProjectsTitle'>PROJECTS</p>
+                <p className='ProjectsTitle'>PROJECTS ({props.projects.length})</p>
                 { 
                     props.projects.sort((a, b) => parseInt(a.order) - parseInt(b.order)).map(
                         project => {

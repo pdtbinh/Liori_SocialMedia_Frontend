@@ -46,7 +46,7 @@ export default function Experiences(props) {
     return (
         <div className='Experiences'>
             <div className='ExperienceCardsCollection'>
-                <p className='ExperiencesTitle'>EXPERIENCES</p>
+                <p className='ExperiencesTitle'>EXPERIENCES ({props.experiences.length})</p>
                 { 
                     [...props.experiences].reverse().map(
                         experience => {

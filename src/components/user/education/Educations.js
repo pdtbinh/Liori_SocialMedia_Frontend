@@ -13,7 +13,7 @@ export default function Educations(props) {
     return (
         <div className='Educations'>
             <div className='EduTitleAndHelp'>
-                <p className='EducationsTitle'>EDUCATIONS</p>
+                <p className='EducationsTitle'>EDUCATIONS ({props.educations.length})</p>
                 <Tooltip title='The charts show how much each degree focuses on the subfileds (in %). Hover onto the edges and points of the graphs to see the annotations'>
                     <HelpOutlineIcon className='EduHelpIcon'/>
                 </Tooltip>
